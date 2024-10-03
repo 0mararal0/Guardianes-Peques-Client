@@ -1,0 +1,84 @@
+.section-noticiasLegal {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.datos h1 {
+  font-size: 45px;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: ConcertOne;
+}
+
+.datos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: Signika;
+}
+
+.datos ul li {
+  margin-bottom: 10px;
+  font-size: 23px;
+}
+
+.datos ul li a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.datos ul li a:hover {
+  text-decoration: underline;
+}
+
+.legal {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.legal p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+}
+
+.legal h3 {
+  font-size: 20px;
+  color: #444;
+  margin-bottom: 10px;
+  font-family: ConcertOne;
+}
+
+.button-legal {
+  width: 25%; /* Hace que el botón ocupe todo el ancho disponible */
+  display: flex; /* Permite centrar el contenido */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  margin: 40px auto 0; /* Espacio superior y centrado */
+  background-color: var(--guardian-rosa); /* Color de fondo del botón */
+  color: rgb(0, 0, 0); /* Color del texto */
+  padding: 10px; /* Espaciado interno del botón */
+  border-radius: 5px; /* Bordes redondeados */
+  border: 2px solid rgb(226, 65, 108); /* Borde */
+  font-size: 25px; /* Tamaño de fuente */
+  font-family: Signika; /* Familia de fuentes */
+  text-decoration: none; /* Eliminar subrayado */
+  text-align: center; /* Alinea el texto en el centro */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+  cursor: pointer; /* Cambia el cursor a puntero */
+}
+
+.button-legal:hover {
+  background-color: #1ec450; /* Color de fondo al pasar el mouse */
+  color: white; /* Cambia el color del texto al pasar el mouse */
+  border: 2px solid rgb(25, 131, 3); /* Cambia el color del borde al pasar el mouse */
+}

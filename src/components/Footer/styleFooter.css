@@ -1,0 +1,61 @@
+.text-footer {
+  text-align: center;
+  font-size: 18px;
+  font-family: Signika;
+  color: white;
+}
+
+.footer {
+  height: 450px;
+  width: 100%; /* Asegura que el footer ocupe todo el ancho */
+  position: relative; /* Cambiado a relative para evitar que el footer se superponga */
+  margin-bottom: 0;
+  background-color: var(--guardian-azul);
+  padding:10px 0;
+}
+
+.footer-contenedor {
+  
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+}
+
+.text-link {
+  font-size: 18px;
+}
+
+.tipo-letra {
+  font-family: ConcertOne;
+}
+
+.footer hr {
+  border: 2px solid white; 
+  margin: 30px 0; /* Margen vertical para separación */
+}
+
+.footer .nav-link {
+  color: white !important; 
+  background-color: transparent !important; /* Asegura que no haya fondo en los enlaces */
+  font-size: 35px;
+}
+
+.footer-icon{
+  width: 80px;
+  
+}
+
+.text-footer-copy{
+  text-align: left;
+  font-size: 18px;
+  font-family: Signika;
+  color: white;
+}
+
+.footer-icon:hover {
+  transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+}
+
+.footer-icon {
+  width: 80px;
+  float: right; /* Esto mueve la imagen a la derecha */
+  
+}

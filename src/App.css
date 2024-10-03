@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "ConcertOne";
+  src: url("./assets/fonts/ConcertOne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Signika";
+  src: url("./assets/fonts/Signika-VariableFont_GRAD\,wght.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --guardian-azul: #0c2d57;
+  --guardian-naranja: #fc6736;
+  --guardian-rosa: #ffb0b0;
+  --guardian-gris: #efecec;
+}
+
+
+html, body {
+  overflow-x: hidden;
+  height: 100%; 
+  margin: 0; 
+}
+
+#root {
+  display: flex;
+  flex-direction: column; 
+  min-height: 100vh; 
+}
+
+main {
+  flex: 1;
+}

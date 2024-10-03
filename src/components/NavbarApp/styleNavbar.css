@@ -1,0 +1,20 @@
+.logoNavbarApp {
+  width: 260px;
+  padding-top: 12px;
+}
+
+.header-navBar{
+  height: 200px;
+  background-color: var(--guardian-rosa);
+}
+
+.header-nav a{
+  font-size: 35px;
+  margin: 0 30px;
+}
+
+.header-nav{
+  padding-right: 200px;
+}
+
+
