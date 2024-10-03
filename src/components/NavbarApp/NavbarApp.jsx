@@ -30,9 +30,6 @@ export const NavbarApp = () => {
               <Nav.Link href="/guardians" className="tipo-letra">
                 Guardianes
               </Nav.Link>
-              <Nav.Link href="#link" className="tipo-letra">
-                FAQ´S
-              </Nav.Link>
 
             </Nav>
           </Navbar.Collapse>
