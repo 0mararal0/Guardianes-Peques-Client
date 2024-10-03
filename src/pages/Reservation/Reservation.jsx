@@ -7,7 +7,7 @@ export const Reservation = () => {
   const [deleted, setDeleted] = useState(false);
   useEffect(() => {
     axios
-      .get("http://localhost:4000/guardian?_embed=client")
+      .get(`${import.meta.env.VITE_SERVER_URL}/guardian?_embed=client`)
       .then((res) => {
         setReservas(res.data);
         setDeleted(false);
@@ -19,7 +19,7 @@ export const Reservation = () => {
 
   const handleDeleted = (id) => {
     axios
-      .delete(`http://localhost:4000/client/${id}`)
+      .delete(`${import.meta.env.VITE_SERVER_URL}/client/${id}`)
       .then((res) => {
         console.log("datos borrados correctamente", res.data);
         setDeleted(true);

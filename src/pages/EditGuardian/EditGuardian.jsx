@@ -17,7 +17,7 @@ export const EditGuardian = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/guardian/${guardianId}`)
+      .get(`${import.meta.env.VITE_SERVER_URL}/guardian/${guardianId}`)
       .then((res) => {
         setDataGuardian(res.data);
       })
@@ -33,7 +33,10 @@ export const EditGuardian = () => {
       event.stopPropagation();
     } else {
       axios
-        .put(`http://localhost:4000/guardian/${guardianId}`, dataGuardian)
+        .put(
+          `${import.meta.env.VITE_SERVER_URL}/guardian/${guardianId}`,
+          dataGuardian
+        )
         .then((res) => {
           console.log("actualizado correctamente", res.data);
         })

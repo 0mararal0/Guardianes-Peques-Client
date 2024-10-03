@@ -10,7 +10,9 @@ export const FilterClient6 = ({
   const [dataGuardian, setDataGuardian] = useState();
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/guardian/${dataClient.guardianId} `)
+      .get(
+        `${import.meta.env.VITE_SERVER_URL}/guardian/${dataClient.guardianId} `
+      )
       .then((res) => {
         setDataGuardian(res.data);
       })
@@ -22,7 +24,7 @@ export const FilterClient6 = ({
 
   const handleSubmit = () => {
     axios
-      .post("http://localhost:4000/client", dataClient)
+      .post(`${import.meta.env.VITE_SERVER_URL}/client`, dataClient)
       .then((res) => {
         console.log("datos enviados correctamente", res.data);
       })
