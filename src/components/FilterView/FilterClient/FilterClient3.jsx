@@ -37,12 +37,13 @@ export const FilterClient3 = ({
 
   return (
     <>
-      <div className="container-xxl">
-        <h3>Fechas</h3>
-        <p>¿Para cuándo?</p>
+      <div className="containerFilterClient1 d-flex flex-column mx-auto gap-3">
+        <h3 className="titleFilterClient1">Fechas</h3>
+        <p className="title2FilterClient1">¿Para cuándo?</p>
         <Form onClick={handleWeek}>
           <div>
-            <p>Días de la semana</p>
+            <Form.Label>Días de la semana</Form.Label>
+
             <Form.Check
               inline
               label="L"
@@ -128,9 +129,11 @@ export const FilterClient3 = ({
             <option value="7">7 hora</option>
             <option value="8">8 hora</option>
           </Form.Select>
-        </Form>
+        </Form>{" "}
+        <button className="btnFilterClient1" onClick={handleNextView}>
+          Siguiente
+        </button>
       </div>
-      <button onClick={handleNextView}>Siguiente</button>
     </>
   );
 };

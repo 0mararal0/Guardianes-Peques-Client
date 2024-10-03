@@ -1,3 +1,4 @@
+import "./styleFilterClient.css";
 import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import ToggleButton from "react-bootstrap/ToggleButton";
@@ -38,70 +39,76 @@ export const FilterClient1 = ({
 
   return (
     <>
-      <div className="container-xxl">
-        <h3>Detalles</h3>
-        <p>¿Cuántos niños tienes?</p>
-        <Form>
-          <div>
-            <Form.Check
-              inline
-              label="1 niño"
-              name="group1"
-              type={"radio"}
-              id={"1"}
-              onChange={handleKids}
-            />
-            <Form.Check
-              inline
-              label="2 niños"
-              name="group1"
-              type={"radio"}
-              id={"2"}
-              onChange={handleKids}
-            />
-          </div>
-          <div>
-            <Form.Check
-              inline
-              label="3 niños"
-              name="group1"
-              type={"radio"}
-              id={"3"}
-              onChange={handleKids}
-            />
-            <Form.Check
-              inline
-              label="+4 niños"
-              name="group1"
-              type={"radio"}
-              id={"4"}
-              onChange={handleKids}
-            />
-          </div>
-        </Form>
-        <p>¿Qué edad tienen?</p>
-        <ToggleButtonGroup
-          type="checkbox"
-          className="d-flex gap-2 flex-wrap w-25 bor"
-        >
-          {Object.keys(kidAge).map((age) => (
-            <ToggleButton
-              key={age}
-              id={age}
-              value={age}
-              checked={kidAge[age]}
-              onChange={() => handleAge(age)}
-            >
-              {age.charAt(0).toUpperCase() + age.slice(1)}
-            </ToggleButton>
-          ))}
-        </ToggleButtonGroup>
+      <div className="containerFilterClient1 d-flex flex-column mx-auto ">
+        <div className="container-xxl containerFormFilterClient1">
+          <h3 className="titleFilterClient1">Detalles</h3>
+          <h4 className="title2FilterClient1">¿Cuántos niños tienes?</h4>
+          <Form className="kidsFilterClient1">
+            <div>
+              <Form.Check
+                inline
+                label="1 niño"
+                name="group1"
+                type={"radio"}
+                id={"1"}
+                onChange={handleKids}
+              />
+              <Form.Check
+                inline
+                label="2 niños"
+                name="group1"
+                type={"radio"}
+                id={"2"}
+                onChange={handleKids}
+              />
+            </div>
+            <div>
+              <Form.Check
+                inline
+                label="3 niños"
+                name="group1"
+                type={"radio"}
+                id={"3"}
+                onChange={handleKids}
+              />
+              <Form.Check
+                inline
+                label="+4 niños"
+                name="group1"
+                type={"radio"}
+                id={"4"}
+                onChange={handleKids}
+              />
+            </div>
+          </Form>
+          <h4 className="title2FilterClient1">¿Qué edad tienen?</h4>
+          <ToggleButtonGroup
+            type="checkbox"
+            className="d-flex gap-2 flex-wrap w-50 buttonFilterClient1 m-3"
+          >
+            {Object.keys(kidAge).map((age) => (
+              <ToggleButton
+                key={age}
+                id={age}
+                value={age}
+                checked={kidAge[age]}
+                onChange={() => handleAge(age)}
+              >
+                {age.charAt(0).toUpperCase() + age.slice(1)}
+              </ToggleButton>
+            ))}
+          </ToggleButtonGroup>
+        </div>
+        {kid === null || Object.values(kidAge).every((age) => !age) ? (
+          <button disabled className="btnFilterClient1">
+            Siguiente
+          </button>
+        ) : (
+          <button className="btnFilterClient1" onClick={handleNextView}>
+            Siguiente
+          </button>
+        )}
       </div>
-      {kid === null || Object.values(kidAge).every((age) => !age) ? (
-        <button disabled>Siguiente</button>
-      ) : (
-        <button onClick={handleNextView}>Siguiente</button>
-      )}
     </>
   );
 };
