@@ -11,10 +11,10 @@ export const FilterGuardian5 = ({
 
   const handleSubmit = () => {
     axios
-      .post("http://localhost:4000/guardian", dataGuardian)
+      .post(`${import.meta.env.VITE_SERVER_URL}/guardian`, dataGuardian)
       .then((res) => {
         console.log("datos enviados correctamente", res.data);
-        // Aquí puedes agregar lógica adicional después de enviar los datos, 
+        // Aquí puedes agregar lógica adicional después de enviar los datos,
         // como cambiar la vista o mostrar un mensaje de éxito
       })
       .catch((err) => {

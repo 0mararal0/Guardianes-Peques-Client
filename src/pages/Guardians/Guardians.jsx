@@ -10,7 +10,7 @@ export const Guardians = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/guardian")
+      .get(`${import.meta.env.VITE_SERVER_URL}/guardian`)
       .then((res) => {
         setDataGuardian(res.data);
         setDeleted(false);
@@ -24,7 +24,7 @@ export const Guardians = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:4000/guardian/${id}`)
+      .delete(`${import.meta.env.VITE_SERVER_URL}/guardian/${id}`)
       .then((res) => {
         console.log("datos borrados correctamente", res.data);
         setDeleted(true);

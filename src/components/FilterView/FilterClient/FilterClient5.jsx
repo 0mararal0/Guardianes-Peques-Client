@@ -15,7 +15,7 @@ export const FilterClient5 = ({
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/guardian")
+      .get(`${import.meta.env.VITE_SERVER_URL}/guardian`)
       .then((res) => {
         console.log(res.data);
 
