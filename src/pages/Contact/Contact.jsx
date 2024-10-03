@@ -1,48 +1,138 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styleContact.css";
+import { Link } from "react-router-dom";
+import img_fondo from "../../assets/images/nube_fondo_bebe.jpg"
 
 export const Contact = () => {
+  const [isChecked, setIsChecked] = useState(false); // Estado para el check visual
+  const [formData, setFormData] = useState({
+    nombre: "",
+    email: "",
+    telefono: "",
+    mensaje: "",
+  }); // Estado para los datos del formulario
+
+  // Maneja el cambio en los inputs y actualiza el estado formData
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+    // Limita el input de teléfono a solo números
+    if (name === "telefono" && isNaN(value)) {
+      return; // Evita actualizar si no es un número
+    }
+
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  // Maneja el clic del botón de envío
+  const handleButtonClick = (e) => {
+    e.preventDefault(); // Previene que el formulario se envíe
+
+    // Verifica si todos los campos están llenos
+    if (
+      formData.nombre.trim() !== "" &&
+      formData.email.trim() !== "" &&
+      formData.telefono.trim() !== "" &&
+      formData.mensaje.trim() !== ""
+    ) {
+      setIsChecked(true); // Muestra el check visual si el formulario está completo
+
+      // Limpia los campos del formulario
+      setFormData({
+        nombre: "",
+        email: "",
+        telefono: "",
+        mensaje: "",
+      });
+    } else {
+      setIsChecked(false); // Asegúrate de que el check no se muestre si hay campos vacíos
+    }
+  };
+
   return (
-    <div className="contact-container">
+    <>
+      <section className="contact-container">
+        <div className="contact-section">
+          <h1>Encuentra tu guardián aquí.</h1>
+          <Link to="/filterClient" className="submit-button">
+            Guardian
+          </Link>
+        </div>
 
-      /* Primera parte */
-      <div className="contact-section">
-        <h1>Encuentra tu guardián</h1>
-        <button>Encuentra tu guardián</button>
-        <p>
-          O llámanos directamente al <a href="tel:+645777812">+645777812</a>
-        </p>
-      </div>
+        <div className="contact-section">
+          <h1>Trabaja con nosotros.</h1>
+          <Link to="/filterGuardian" className="submit-button">
+            Únete al equipo
+          </Link>
+        </div>
 
-      /* Segunda parte */
-      <div className="form-section">
-        <div>
-          <h2>¿Necesitas un cuidador?</h2>
-          <form>
+        <div className="form-section">
+          <h2>Contáctanos</h2>
+          <form className="contact-form">
             <label htmlFor="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required />
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Tu nombre"
+              value={formData.nombre}
+              onChange={handleInputChange}
+              required
+            />
+
+            <label htmlFor="email">Correo electrónico:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Tu correo electrónico"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+            />
 
             <label htmlFor="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" required />
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              placeholder="Tu número de teléfono"
+              value={formData.telefono}
+              onChange={handleInputChange}
+              required
+            />
 
             <label htmlFor="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="5"
+              placeholder="Escribe tu mensaje aquí"
+              value={formData.mensaje}
+              onChange={handleInputChange}
+              required
+            ></textarea>
 
-            <button type="submit">Solicitud de llamada</button>
+            <div className="submit-button-container">
+              <button
+                type="submit"
+                className="submit-button"
+                onClick={handleButtonClick}
+              >
+                Enviar mensaje
+              </button>
+            </div>
+
+            {/* Check visual que se muestra al hacer clic en "Enviar mensaje" si el formulario está completo */}
+            {isChecked && (
+              <span className="check-mark">✔ Mensaje enviado con éxito</span>
+            )}
           </form>
         </div>
-
-        /* Recordatorio del número de teléfono */
-        <div className="phone">
-          <h3>Recuerda:</h3>
-          <p>Puedes llamarnos al:</p>
-          <p>
-            <strong>
-              <a href="tel:+123456789">+1 234 567 89</a>
-            </strong>
-          </p>
-        </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 };

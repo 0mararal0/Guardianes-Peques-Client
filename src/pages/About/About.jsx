@@ -1,13 +1,14 @@
 import React from "react";
 import "./styleAbout.css";
 import imagenUno from "../../assets/images/XEKFGJNTN5G2TLE4HLGXU5LN5U.avif";
+import imgNube from "../../assets/images/nube_fondo_bebe.jpg"
 
 export const About = () => {
   
   return (
     <>
       <section className="section-class" style={{ backgroundImage: `url(${imagenUno})` }}>
-      <h1 className="titulo-p">Acerca de nosotros</h1>
+      <h1 className="titulo-p">Nuestra misión</h1>
         <div className="fondo">
           <div className="div-cards container-xxl">
 
@@ -16,6 +17,7 @@ export const About = () => {
               <p className="texto">
                 Guardianes & Peques es una plataforma creada con el objetivo de
                 ofrecer atención de calidad a los pequeños de la casa.
+                <p>✨✨✨✨✨</p>
               </p>
             </div>
 
@@ -26,6 +28,7 @@ export const About = () => {
                 que se adapten a sus necesidades, al tiempo que brindamos
                 oportunidades laborales a profesionales en el ámbito del cuidado
                 infantil.
+                <p>✨✨✨✨✨</p>
               </p>
             </div>
 
@@ -34,6 +37,7 @@ export const About = () => {
               <p className="texto">
                 Para las familias, proporcionamos una solución accesible y
                 completa que simplifica la búsqueda de niñeras y educadores.
+                <p>✨✨✨✨✨</p>
               </p>
             </div>
             
@@ -44,6 +48,7 @@ export const About = () => {
                 Para los cuidadores, ofrecemos una plataforma donde pueden descubrir
                 oportunidades laborales de calidad y conectar con familias que
                 valoran su experiencia y dedicación.
+                <p>✨✨✨✨✨</p>
               </p>
             </div>
 
@@ -52,6 +57,7 @@ export const About = () => {
               <p className="texto">
                 Cuidadores con experiencia en necesidades especiales y otros
                 profesionales del cuidado infantil.
+                <p>✨✨✨✨✨</p>
               </p>
             </div>
           </div>

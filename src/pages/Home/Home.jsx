@@ -9,7 +9,7 @@ export const Home = () => {
       <section className="containerSection1Home d-flex justify-content-center">
         <img src={fotoHome} alt="imagen" />
         <div className="div-home my-auto">
-          <h1>Personas de confianza cerca de ti</h1>
+          <h1>Personas de confianza cerca de tí</h1>
           <div className="boton-centro">
             <Link to={"/filter"}>
               <p>Guardianes</p>

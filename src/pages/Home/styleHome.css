@@ -12,10 +12,10 @@
 
 .div-home {
   position: absolute;
-  top: 70%;
-  left: 70%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente */
+  background-color: rgba(248, 182, 214, 0.7); /* Fondo semi-transparente */
   padding: 20px;
   border-radius: 10px;
   text-align: center;
