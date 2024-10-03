@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const FilterClient5 = ({
   setComponentView,
@@ -11,7 +11,7 @@ export const FilterClient5 = ({
   dataClient,
 }) => {
   const [dataGuardianSelect, setDataGuardianSelect] = useState([]);
-  console.log(dataClient);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -78,8 +78,7 @@ export const FilterClient5 = ({
             return false;
           if (horaInicioClient + parseInt(dataClient.reservationTime) > horaFin)
             return false;
-          console.log(horaInicio);
-          console.log(elem.horaInicio);
+          if (dataClient.localidad !== elem.provincia) return false;
 
           return true;
         });
@@ -99,44 +98,67 @@ export const FilterClient5 = ({
       ...prov,
       guardianId: id,
     }));
+    navigate(`/reservation/${id}`);
   };
   return (
     <>
-      <h3>Estos son los guardianes disponibles para ti</h3>
-      {dataGuardianSelect?.length !== 0 ? (
-        dataGuardianSelect.map((elem) => {
-          return (
-            <Card key={elem.id} style={{ width: "18rem" }}>
-              <Card.Img variant="top" src={elem.foto} />
-              <Card.Body>
-                <Card.Title>
-                  {elem.nombre} {elem.apellidos}
-                </Card.Title>
-                <Card.Text>{elem.comentario}</Card.Text>
-              </Card.Body>
-              <ListGroup className="list-group-flush">
-                <ListGroup.Item>
-                  {elem.teléfono} {elem.email}{" "}
-                </ListGroup.Item>
-                <ListGroup.Item>
-                  {elem.localidad} {elem.provincia}
-                </ListGroup.Item>
-              </ListGroup>
-              <Card.Body>
-                <button onClick={() => handleSubmit(elem.id)}> </button>
-                <Link to={`/reservation/${elem.id}`}>Reservar</Link>
-              </Card.Body>
-            </Card>
-          );
-        })
-      ) : (
-        <div>
-          <p>Ahora no hay ningun guardian disponible</p>
-          <p>Quieres volver a rellenar el formulario?</p>
-          <Link to={"/filter"}>Si</Link>
-          <Link to={"/"}>No</Link>
-        </div>
-      )}
+      <div className="containerFilterClient1 d-flex flex-column mx-auto ">
+        <h3 className="titleFilterClient1">Guardianes disponibles</h3>
+        {dataGuardianSelect?.length !== 0 ? (
+          dataGuardianSelect.map((elem) => {
+            return (
+              <Card key={elem.id} style={{ width: "18rem" }}>
+                <Card.Img variant="top" src={elem.foto} />
+                <Card.Body>
+                  <Card.Title>
+                    {elem.nombre} {elem.apellidos}
+                  </Card.Title>
+                  <Card.Text>{elem.comentario}</Card.Text>
+                </Card.Body>
+                <ListGroup className="list-group-flush">
+                  <ListGroup.Item>
+                    {elem.teléfono} {elem.email}{" "}
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    {elem.localidad} {elem.provincia}
+                  </ListGroup.Item>
+                </ListGroup>
+                <Card.Body>
+                  <button
+                    className="btnFilterClient1"
+                    onClick={() => handleSubmit(elem.id)}
+                  >
+                    Reservar{" "}
+                  </button>
+                </Card.Body>
+              </Card>
+            );
+          })
+        ) : (
+          <div>
+            <p className="title2FilterClient1">
+              Ahora no hay ningun guardian disponible
+            </p>
+            <p className="title2FilterClient1">
+              Quieres volver a rellenar el formulario?
+            </p>
+            <div className=" d-flex gap-4 justify-content-center">
+              <button
+                className="btnFilterClient1"
+                onClick={() => navigate("/filter")}
+              >
+                Si
+              </button>
+              <button
+                className="btnFilterClient1"
+                onClick={() => navigate("/")}
+              >
+                No
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
     </>
   );
 };

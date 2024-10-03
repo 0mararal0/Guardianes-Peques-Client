@@ -32,13 +32,13 @@ export const FilterClient2 = ({
 
   return (
     <>
-      <div className="container-xxl">
-        <h3>Detalles</h3>
-        <p>¿Necesitas cuidados adicionales?</p>
+      <div className="containerFilterClient1 d-flex flex-column mx-auto">
+        <h3 className="titleFilterClient1">Detalles</h3>
+        <p className="title2FilterClient1">¿Necesitas cuidados adicionales?</p>
 
         <ToggleButtonGroup
           type="checkbox"
-          className="d-flex gap-2 flex-wrap w-25 bor"
+          className="d-flex gap-2 flex-wrap w-50 buttonFilterClient1 m-3"
         >
           {Object.keys(task).map((key) => (
             <ToggleButton
@@ -52,9 +52,11 @@ export const FilterClient2 = ({
             </ToggleButton>
           ))}
         </ToggleButtonGroup>
-      </div>
 
-      <button onClick={handleNextView}>Siguiente</button>
+        <button className="btnFilterClient1" onClick={handleNextView}>
+          Siguiente
+        </button>
+      </div>
     </>
   );
 };

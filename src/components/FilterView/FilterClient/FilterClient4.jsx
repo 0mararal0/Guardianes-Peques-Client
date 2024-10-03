@@ -80,9 +80,9 @@ export const FilterClient4 = ({
 
   return (
     <>
-      <div className="container-xxl">
-        <h3>Ya estamos acabando</h3>
-        <p>Datos personales</p>
+      <div className="containerFilterClient1 d-flex flex-column mx-auto">
+        <h3 className="titleFilterClient1">Ya estamos acabando</h3>
+        <p className="title2FilterClient1">Datos personales</p>
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
           <Row className="mb-3">
             <Form.Group as={Col} md="4" controlId="validationCustom01">
@@ -176,7 +176,7 @@ export const FilterClient4 = ({
               </Form.Control.Feedback>
             </Form.Group>
             <Form.Group as={Col} md="2" controlId="validationCustom04">
-              <Form.Label>Código Postal</Form.Label>
+              <Form.Label>C.P.</Form.Label>
               <Form.Control
                 onChange={handleZip}
                 type="text"
@@ -234,8 +234,12 @@ export const FilterClient4 = ({
               </Form.Control.Feedback>
             </Form.Group>
           </Row>
-
-          <Button type="submit">Submit form</Button>
+          <div className="w-100 text-center">
+            <button className="btnFilterClient1 " type="submit">
+              Siguiente
+            </button>
+          </div>
+          {/*  <Button>Submit form</Button> */}
         </Form>
       </div>
     </>

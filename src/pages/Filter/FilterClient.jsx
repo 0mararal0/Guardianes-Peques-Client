@@ -1,3 +1,4 @@
+import "./styleFilter.css";
 import { useState } from "react";
 import { FilterClient1 } from "../../components/FilterView/FilterClient/FilterClient1";
 import { FilterClient2 } from "../../components/FilterView/FilterClient/FilterClient2";
@@ -16,51 +17,57 @@ export const FilterClient = () => {
 
   return (
     <>
-      <ProgressBar variant="success" now={progress} />
-      {componentView === 1 && (
-        <FilterClient1
-          setComponentView={setComponentView}
-          setProgress={setProgress}
-          setDataClient={setDataClient}
+      <div className="my-3 containerFilterClient">
+        <ProgressBar
+          className="w-75 mx-auto"
+          variant="success"
+          now={progress}
         />
-      )}
-      {componentView === 2 && (
-        <FilterClient2
-          setComponentView={setComponentView}
-          setProgress={setProgress}
-          setDataClient={setDataClient}
-        />
-      )}
-      {componentView === 3 && (
-        <FilterClient3
-          setComponentView={setComponentView}
-          setProgress={setProgress}
-          setDataClient={setDataClient}
-        />
-      )}
-      {componentView === 4 && (
-        <FilterClient4
-          setComponentView={setComponentView}
-          setProgress={setProgress}
-          setDataClient={setDataClient}
-        />
-      )}
-      {componentView === 5 && (
-        <FilterClient5
-          setComponentView={setComponentView}
-          setProgress={setProgress}
-          setDataClient={setDataClient}
-          dataClient={dataClient}
-        />
-      )}
-      {componentView === 6 && (
-        <FilterClient6
-          setComponentView={setComponentView}
-          setProgress={setProgress}
-          setDataClient={setDataClient}
-          dataClient={dataClient}
-        />
-      )}
+        {componentView === 1 && (
+          <FilterClient1
+            setComponentView={setComponentView}
+            setProgress={setProgress}
+            setDataClient={setDataClient}
+          />
+        )}
+        {componentView === 2 && (
+          <FilterClient2
+            setComponentView={setComponentView}
+            setProgress={setProgress}
+            setDataClient={setDataClient}
+          />
+        )}
+        {componentView === 3 && (
+          <FilterClient3
+            setComponentView={setComponentView}
+            setProgress={setProgress}
+            setDataClient={setDataClient}
+          />
+        )}
+        {componentView === 4 && (
+          <FilterClient4
+            setComponentView={setComponentView}
+            setProgress={setProgress}
+            setDataClient={setDataClient}
+          />
+        )}
+        {componentView === 5 && (
+          <FilterClient5
+            setComponentView={setComponentView}
+            setProgress={setProgress}
+            setDataClient={setDataClient}
+            dataClient={dataClient}
+          />
+        )}
+        {componentView === 6 && (
+          <FilterClient6
+            setComponentView={setComponentView}
+            setProgress={setProgress}
+            setDataClient={setDataClient}
+            dataClient={dataClient}
+          />
+        )}
+      </div>
     </>
   );
 };
