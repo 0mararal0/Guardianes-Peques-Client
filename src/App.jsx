@@ -11,9 +11,10 @@ import { FilterGuardian } from "./pages/Filter/FilterGuardian";
 import { LegalNotice } from "./pages/LegalNotice/LegalNotice";
 import { Contact } from "./pages/Contact/Contact";
 import { NotFound } from "./pages/NotFound/NotFound";
-import { Reservation } from "./pages/Reservation/reservation";
+
 import { Guardians } from "./pages/Guardians/Guardians";
 import { EditGuardian } from "./pages/EditGuardian/EditGuardian";
+import { Reservation } from "./pages/Reservation/Reservation";
 
 function App() {
   return (
