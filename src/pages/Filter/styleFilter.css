@@ -1,0 +1,27 @@
+.containerFilter h3 {
+  font-family: "ConcertOne";
+  font-size: 3rem;
+  margin-block: 100px;
+}
+
+.containerLinkFilter {
+  height: 100px;
+  max-width: 500px;
+  border: 2px solid black;
+  border-radius: 50px;
+  padding: 15px 30px;
+  margin-inline: auto;
+  margin-block: 50px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.containerLinkFilter img {
+  height: 90%;
+}
+.containerLinkFilter p {
+  margin: 0;
+  font-family: "Signika";
+  font-size: 2rem;
+  color: black;
+}
