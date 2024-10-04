@@ -25,8 +25,7 @@ export const Guardians = () => {
   const handleDelete = (id) => {
     axios
       .delete(`${import.meta.env.VITE_SERVER_URL}/guardian/${id}`)
-      .then((res) => {
-        console.log("datos borrados correctamente", res.data);
+      .then(() => {
         setDeleted(true);
         setDataGuardian("");
       })

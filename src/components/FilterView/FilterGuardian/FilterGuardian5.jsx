@@ -1,5 +1,3 @@
-import React from "react";
-import { Button } from "react-bootstrap";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -9,16 +7,12 @@ export const FilterGuardian5 = ({ dataGuardian }) => {
   const handleSubmit = () => {
     axios
       .post(`${import.meta.env.VITE_SERVER_URL}/guardian`, dataGuardian)
-      .then((res) => {
-        console.log("datos enviados correctamente", res.data);
+      .then(() => {
         navigate("/");
       })
       .catch((err) => {
         console.log(err);
-
         navigate("/error");
-        
-
       });
   };
 

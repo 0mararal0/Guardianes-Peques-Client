@@ -8,7 +8,6 @@
   align-items: center;
   background-color: rgb(225, 220, 220);
 }
-
 .full-image {
   width: 80%;
   max-width: 1500px;
@@ -17,13 +16,11 @@
   z-index: 0;
   border-radius: 500px;
 }
-
 .not-found-container h1,
 .not-found-container h2,
 .not-found-container p {
   margin: 10px 0;
 }
-
 .not-found-div {
   position: absolute;
   top: 70%;
@@ -38,16 +35,13 @@
   align-items: center;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 1.2);
 }
-
 .not-found-div h1 {
   margin-bottom: 20px;
   font-family: ConcertOne;
 }
-
 .not-found-div a {
   text-decoration: none;
 }
-
 .not-found-div p {
   background-color: var(--guardian-rosa);
   color: rgb(0, 0, 0);
@@ -63,7 +57,6 @@
   font-family: Signika;
   border: 2px solid rgb(226, 65, 108);
 }
-
 .not-found-div p:hover {
   background-color: #1ec450;
   color: white;

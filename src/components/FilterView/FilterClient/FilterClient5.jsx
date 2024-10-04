@@ -89,7 +89,6 @@ export const FilterClient5 = ({
 
       .catch((err) => {
         console.log(err);
-
         navigate("/error");
       });
   }, []);

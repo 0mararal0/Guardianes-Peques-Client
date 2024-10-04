@@ -10,8 +10,6 @@ export const FilterGuardian = () => {
   const [progress, setProgress] = useState(100 / 4);
   const [dataGuardian, setDataGuardian] = useState({});
 
-  console.log(dataGuardian);
-
   return (
     <>
       <ProgressBar

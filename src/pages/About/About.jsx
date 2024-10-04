@@ -1,4 +1,3 @@
-import React from "react";
 import "./styleAbout.css";
 import imagenUno from "../../assets/images/XEKFGJNTN5G2TLE4HLGXU5LN5U.avif";
 

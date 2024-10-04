@@ -1,15 +1,12 @@
 .containerSection1Home {
-  
   position: relative;
   width: 100dvw;
   height: auto;
 }
-
 .containerSection1Home img {
   width: 100%;
   height: auto;
 }
-
 .div-home {
   position: absolute;
   top: 50%;
@@ -24,23 +21,19 @@
   align-items: flex-end; /* Alinea los botones a la derecha */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 1.2);
 }
-
 .boton-centro {
   width: 100%; /* Hace que el contenedor del botón ocupe todo el ancho del div */
   display: flex; /* Permite centrar contenido */
   justify-content: center; /* Centra el contenido horizontalmente */
   margin-bottom: 10px; /* Espacio entre el botón centrado y los otros */
 }
-
 .div-home h1 {
   margin-bottom: 20px;
   font-family: ConcertOne;
 }
-
 .div-home a {
   text-decoration: none;
 }
-
 .div-home p {
   background-color: var(--guardian-rosa); /* Color del botón */
   color: rgb(0, 0, 0);
@@ -56,7 +49,6 @@
   font-family: Signika;
   border: 2px solid rgb(226, 65, 108);
 }
-
 .div-home p:hover {
   background-color: #1ec450; /* Efecto hover */
   color: white;

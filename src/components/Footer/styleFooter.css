@@ -4,7 +4,6 @@
   font-family: Signika;
   color: white;
 }
-
 .footer {
   height: 320px;
   width: 100%;
@@ -13,45 +12,36 @@
   background-color: var(--guardian-azul);
   padding: 10px 0;
 }
-
 .footer-contenedor {
   width: 100%;
 }
-
 .text-link {
   font-size: 18px;
 }
-
 .tipo-letra {
   font-family: ConcertOne;
 }
-
 .footer hr {
   border: 2px solid white;
   margin: 30px 0;
 }
-
 .footer .nav-link {
   color: white !important;
   background-color: transparent !important;
   font-size: 35px;
 }
-
 .footer-icon {
   width: 80px;
 }
-
 .text-footer-copy {
   text-align: left;
   font-size: 18px;
   font-family: Signika;
   color: white;
 }
-
 .footer-icon:hover {
   transform: scale(1.1);
 }
-
 .footer-icon {
   width: 80px;
   float: right;

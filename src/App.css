@@ -11,33 +11,28 @@
   font-weight: normal;
   font-style: normal;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 :root {
   --guardian-azul: #0c2d57;
   --guardian-naranja: #fc6736;
   --guardian-rosa: #ffb0b0;
   --guardian-gris: #efecec;
 }
-
-
-html, body {
+html,
+body {
   overflow-x: hidden;
-  height: 100%; 
-  margin: 0; 
+  height: 100%;
+  margin: 0;
 }
-
 #root {
   display: flex;
-  flex-direction: column; 
-  min-height: 100vh; 
+  flex-direction: column;
+  min-height: 100vh;
 }
-
 main {
   flex: 1;
 }
