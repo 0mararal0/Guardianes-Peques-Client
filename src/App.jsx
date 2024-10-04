@@ -28,7 +28,7 @@ function App() {
           <Route path="/legalNotice" element={<LegalNotice />} />
           <Route path="/filter" element={<Filter />} />
           <Route path="/filterClient" element={<FilterClient />} />
-          <Route path="/filterClient/" element={<FilterClient />} />
+          {/* <Route path="/filterClient/" element={<FilterClient />} /> */}
           <Route path="/filterGuardian" element={<FilterGuardian />} />
           <Route path="/guardians" element={<Guardians />} />
           <Route path="/editGuardian/:guardianId" element={<EditGuardian />} />
