@@ -17,4 +17,7 @@
   padding-right: 200px;
 }
 
-
+.header-navBar {
+  height: auto;
+  background-color: var(--guardian-rosa);
+}

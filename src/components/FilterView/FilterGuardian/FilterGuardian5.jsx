@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import axios from "axios"; // Asegúrate de importar axios
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 export const FilterGuardian5 = ({ dataGuardian }) => {
@@ -12,21 +12,19 @@ export const FilterGuardian5 = ({ dataGuardian }) => {
       .then((res) => {
         console.log("datos enviados correctamente", res.data);
         navigate("/");
-        // Aquí puedes agregar lógica adicional después de enviar los datos,
-        // como cambiar la vista o mostrar un mensaje de éxito
       })
       .catch((err) => {
         console.log(err);
+
         navigate("/error");
-        // Aquí puedes manejar el error, tal vez mostrando un mensaje al usuario
+        
+
       });
   };
 
   return (
     <div className="containerFilterClient1 mx-auto my-5">
       <h3 className="titleFilterClient1">Resumen de selección</h3>
-
-      {/* Datos personales del Guardián */}
       <h4>Datos del Guardián:</h4>
       <p>
         <strong>Nombre:</strong> {dataGuardian.nombre || "No disponible"}
@@ -65,7 +63,6 @@ export const FilterGuardian5 = ({ dataGuardian }) => {
         </p>
       )}
 
-      {/* Días seleccionados */}
       <h4>Días seleccionados:</h4>
       <ul>
         {dataGuardian.diasSemana ? (
@@ -77,7 +74,6 @@ export const FilterGuardian5 = ({ dataGuardian }) => {
         )}
       </ul>
 
-      {/* Horas */}
       <h4>Horas:</h4>
       <p>
         <strong>Hora de inicio:</strong>{" "}
@@ -87,7 +83,6 @@ export const FilterGuardian5 = ({ dataGuardian }) => {
         <strong>Hora de fin:</strong> {dataGuardian.horaFin || "No disponible"}
       </p>
 
-      {/* Número de niños y edad */}
       <h4>Detalles de los niños:</h4>
       <p>
         <strong>Número de niños:</strong>{" "}
@@ -113,7 +108,6 @@ export const FilterGuardian5 = ({ dataGuardian }) => {
         )}
       </ul>
 
-      {/* Tareas seleccionadas */}
       <h4>Tareas seleccionadas:</h4>
       <ul>
         {dataGuardian.cocinar && <li>Cocinar</li>}
@@ -123,18 +117,15 @@ export const FilterGuardian5 = ({ dataGuardian }) => {
         {dataGuardian.dormir && <li>Ayuda con el dormir</li>}
       </ul>
 
-      {/* Tarifa */}
       <h4>Tarifa:</h4>
       <p>
         <strong>Tarifa por hora:</strong> $
         {dataGuardian.tarifa || "No disponible"}
       </p>
 
-      {/* Comentarios adicionales */}
       <h4>Comentarios adicionales:</h4>
       <p>{dataGuardian.comentario || "Sin comentarios"}</p>
 
-      {/* Botón para continuar */}
       <button
         className="btnFormClient"
         onClick={handleSubmit}

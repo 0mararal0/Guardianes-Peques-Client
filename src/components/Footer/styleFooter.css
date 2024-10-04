@@ -7,15 +7,15 @@
 
 .footer {
   height: 320px;
-  width: 100%; /* Asegura que el footer ocupe todo el ancho */
-  position: relative; /* Cambiado a relative para evitar que el footer se superponga */
+  width: 100%;
+  position: relative;
   margin-bottom: 0;
   background-color: var(--guardian-azul);
-  padding:10px 0;
+  padding: 10px 0;
 }
 
 .footer-contenedor {
-  width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+  width: 100%;
 }
 
 .text-link {
@@ -27,22 +27,21 @@
 }
 
 .footer hr {
-  border: 2px solid white; 
-  margin: 30px 0; /* Margen vertical para separación */
+  border: 2px solid white;
+  margin: 30px 0;
 }
 
 .footer .nav-link {
-  color: white !important; 
-  background-color: transparent !important; /* Asegura que no haya fondo en los enlaces */
+  color: white !important;
+  background-color: transparent !important;
   font-size: 35px;
 }
 
-.footer-icon{
+.footer-icon {
   width: 80px;
-  
 }
 
-.text-footer-copy{
+.text-footer-copy {
   text-align: left;
   font-size: 18px;
   font-family: Signika;
@@ -50,11 +49,10 @@
 }
 
 .footer-icon:hover {
-  transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+  transform: scale(1.1);
 }
 
 .footer-icon {
   width: 80px;
-  float: right; /* Esto mueve la imagen a la derecha */
-  
+  float: right;
 }

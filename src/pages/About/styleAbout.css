@@ -15,11 +15,10 @@
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Mantiene las tarjetas alineadas al inicio */
+  align-items: flex-start;
   padding: 20px;
 }
 
-/* Fondo translúcido para las cards */
 .card {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 20px;
@@ -34,7 +33,6 @@
   height: 150px;
 }
 
-/* Texto de las tarjetas */
 .card .texto {
   opacity: 0;
   visibility: hidden;
@@ -88,4 +86,3 @@
   color: #444;
   font-family: Signika;
 }
-

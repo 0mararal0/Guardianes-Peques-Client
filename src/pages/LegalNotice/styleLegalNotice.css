@@ -1,29 +1,26 @@
 .section-noticiasLegal {
   border: none;
-  background-color: transparent; /* Fondo blanco semitransparente */
-  border-radius: 10px; /* Bordes redondeados */
-  max-width: 900px; /* Ancho máximo de la sección */
-  margin: 20px; /* Margen alrededor de la sección */
-  padding: 20px; /* Espaciado interno */
-  
+  background-color: transparent;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 20px;
+  padding: 20px;
 }
 
 .main-legal {
-  height: 100vh; /* Asegura que el main cubra toda la altura de la ventana */
-  background-image: url('../../assets/images/nube_fondo_bebe.jpg'); /* Cambia la ruta si es necesario */
-  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
-  background-position: center; /* Centra la imagen */
-  display: flex; /* Flex para centrar el contenido */
-  align-items: center; /* Centra el contenido verticalmente */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  padding: 20px; /* Espaciado interno */
+  height: 100vh;
+  background-image: url("../../assets/images/nube_fondo_bebe.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
-.main-legal li{
+.main-legal li {
   font-family: Signika;
 }
-
-
 
 .datos h1 {
   font-size: 45px;
@@ -80,25 +77,25 @@
 }
 
 .button-legal {
-  width: 25%; /* Hace que el botón ocupe todo el ancho disponible */
-  display: flex; /* Permite centrar el contenido */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  margin: 40px auto 0; /* Espacio superior y centrado */
-  background-color: var(--guardian-rosa); /* Color de fondo del botón */
-  color: rgb(0, 0, 0); /* Color del texto */
-  padding: 10px; /* Espaciado interno del botón */
-  border-radius: 5px; /* Bordes redondeados */
-  border: 2px solid rgb(226, 65, 108); /* Borde */
-  font-size: 25px; /* Tamaño de fuente */
-  font-family: Signika; /* Familia de fuentes */
-  text-decoration: none; /* Eliminar subrayado */
-  text-align: center; /* Alinea el texto en el centro */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
-  cursor: pointer; /* Cambia el cursor a puntero */
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  margin: 40px auto 0;
+  background-color: var(--guardian-rosa);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid rgb(226, 65, 108);
+  font-size: 25px;
+  font-family: Signika;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
 }
 
 .button-legal:hover {
-  background-color: #1ec450; /* Color de fondo al pasar el mouse */
-  color: white; /* Cambia el color del texto al pasar el mouse */
-  border: 2px solid rgb(25, 131, 3); /* Cambia el color del borde al pasar el mouse */
+  background-color: #1ec450;
+  color: white;
+  border: 2px solid rgb(25, 131, 3);
 }

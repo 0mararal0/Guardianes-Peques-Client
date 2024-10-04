@@ -3,21 +3,19 @@ import "./styleContact.css";
 import { Link } from "react-router-dom";
 
 export const Contact = () => {
-  const [isChecked, setIsChecked] = useState(false); // Estado para el check visual
+  const [isChecked, setIsChecked] = useState(false);
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
     telefono: "",
     mensaje: "",
-  }); // Estado para los datos del formulario
+  });
 
-  // Maneja el cambio en los inputs y actualiza el estado formData
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
-    // Limita el input de teléfono a solo números
     if (name === "telefono" && isNaN(value)) {
-      return; // Evita actualizar si no es un número
+      return;
     }
 
     setFormData((prevData) => ({
@@ -26,20 +24,17 @@ export const Contact = () => {
     }));
   };
 
-  // Maneja el clic del botón de envío
   const handleButtonClick = (e) => {
-    e.preventDefault(); // Previene que el formulario se envíe
+    e.preventDefault();
 
-    // Verifica si todos los campos están llenos
     if (
       formData.nombre.trim() !== "" &&
       formData.email.trim() !== "" &&
       formData.telefono.trim() !== "" &&
       formData.mensaje.trim() !== ""
     ) {
-      setIsChecked(true); // Muestra el check visual si el formulario está completo
+      setIsChecked(true);
 
-      // Limpia los campos del formulario
       setFormData({
         nombre: "",
         email: "",
@@ -47,7 +42,7 @@ export const Contact = () => {
         mensaje: "",
       });
     } else {
-      setIsChecked(false); // Asegúrate de que el check no se muestre si hay campos vacíos
+      setIsChecked(false);
     }
   };
 
@@ -125,7 +120,6 @@ export const Contact = () => {
               </button>
             </div>
 
-            {/* Check visual que se muestra al hacer clic en "Enviar mensaje" si el formulario está completo */}
             {isChecked && (
               <span className="check-mark">✔ Mensaje enviado con éxito</span>
             )}
