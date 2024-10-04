@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FilterGuardian1 } from "../../components/FilterView/FilterGuardian/FilterGuardian1";
 import { FilterGuardian2 } from "../../components/FilterView/FilterGuardian/FilterGuardian2";
 import { FilterGuardian4 } from "../../components/FilterView/FilterGuardian/FilterGuardian4";
@@ -7,7 +7,7 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 
 export const FilterGuardian = () => {
   const [componentView, setComponentView] = useState(1);
-  const [progress, setProgress] = useState(100 / 4); // Ajustar según el número de pasos
+  const [progress, setProgress] = useState(100 / 4);
   const [dataGuardian, setDataGuardian] = useState({});
 
   console.log(dataGuardian);

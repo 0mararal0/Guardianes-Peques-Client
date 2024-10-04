@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./styleContact.css";
 import { Link } from "react-router-dom";
-import img_fondo from "../../assets/images/nube_fondo_bebe.jpg"
 
 export const Contact = () => {
   const [isChecked, setIsChecked] = useState(false); // Estado para el check visual

@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-
 import "./App.css";
 import { Home } from "./pages/Home/Home";
 import { NavbarApp } from "./components/NavbarApp/NavbarApp";
@@ -11,7 +10,6 @@ import { FilterGuardian } from "./pages/Filter/FilterGuardian";
 import { LegalNotice } from "./pages/LegalNotice/LegalNotice";
 import { Contact } from "./pages/Contact/Contact";
 import { NotFound } from "./pages/NotFound/NotFound";
-
 import { Guardians } from "./pages/Guardians/Guardians";
 import { EditGuardian } from "./pages/EditGuardian/EditGuardian";
 import { Reservation } from "./pages/Reservation/Reservation";
@@ -29,7 +27,6 @@ function App() {
           <Route path="/legalNotice" element={<LegalNotice />} />
           <Route path="/filter" element={<Filter />} />
           <Route path="/filterClient" element={<FilterClient />} />
-          {/* <Route path="/filterClient/" element={<FilterClient />} /> */}
           <Route path="/filterGuardian" element={<FilterGuardian />} />
           <Route path="/guardians" element={<Guardians />} />
           <Route path="/editGuardian/:guardianId" element={<EditGuardian />} />

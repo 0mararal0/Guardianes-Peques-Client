@@ -22,15 +22,15 @@ export const EditGuardian = () => {
       .then((res) => {
         setDataGuardian(res.data);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
+        navigate("/error");
       });
   }, []);
 
   const handleSubmit = (event) => {
+    event.preventDefault();
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
-      event.preventDefault();
       event.stopPropagation();
     } else {
       axios
@@ -38,13 +38,13 @@ export const EditGuardian = () => {
           `${import.meta.env.VITE_SERVER_URL}/guardian/${guardianId}`,
           dataGuardian
         )
-        .then((res) => {
-          console.log("actualizado correctamente", res.data);
+        .then(() => {
+          navigate("/guardians");
         })
         .catch((err) => {
           console.log(err);
+          navigate("/error");
         });
-      navigate("/guardians");
     }
     setValidated(true);
   };

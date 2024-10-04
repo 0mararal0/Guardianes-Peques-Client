@@ -17,6 +17,7 @@ export const FilterGuardian5 = ({ dataGuardian }) => {
       })
       .catch((err) => {
         console.log(err);
+        navigate("/error");
         // Aquí puedes manejar el error, tal vez mostrando un mensaje al usuario
       });
   };

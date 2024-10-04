@@ -1,6 +1,6 @@
 import "./styleGuardians.css";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
@@ -18,6 +18,7 @@ export const Guardians = () => {
       })
       .catch((err) => {
         console.log(err);
+        navigate("/error");
       });
   }, [deleted]);
 
@@ -31,6 +32,7 @@ export const Guardians = () => {
       })
       .catch((err) => {
         console.log(err);
+        navigate("/error");
       });
   };
 
