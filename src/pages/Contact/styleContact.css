@@ -4,13 +4,12 @@
 }
 
 .contact-container {
-   /* Ajusta la posición, el tamaño y el estilo según lo necesites */
-   background-image: url('../../assets/images/nube_fondo_bebe.jpg'); /* Cambia la ruta si es necesario */
-   background-size: cover; /* Asegúrate de que la imagen cubra todo el contenedor */
-   background-position: center; /* Centra la imagen */
-   padding: 20px; /* Añade un poco de espacio alrededor */
-   min-height: 100vh; /* Asegúrate de que el contenedor ocupe toda la altura de la ventana */
-   position: relative; /* Permite que los elementos hijos se posicionen correctamente */
+  background-image: url("../../assets/images/nube_fondo_bebe.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  min-height: 100vh;
+  position: relative;
 }
 
 .contact-section h1 {
@@ -21,16 +20,16 @@
 
 .form-section {
   margin-top: 50px;
-  max-width: 600px; /* Ancho máximo del formulario */
-  margin-left: auto; /* Centra horizontalmente */
-  margin-right: auto; /* Centra horizontalmente */
-  padding: 20px; /* Añade un poco de espacio alrededor */
-  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
-  border-radius: 8px; /* Esquinas redondeadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.form-section h2{
+.form-section h2 {
   text-align: center;
   font-family: ConcertOne;
 }
@@ -62,12 +61,12 @@
 }
 
 .submit-button {
-  background-color: var(--guardian-rosa); /* Color del botón */
+  background-color: var(--guardian-rosa);
   color: rgb(0, 0, 0);
   padding: 10px 20px;
   border-radius: 5px;
   margin: 10px 0;
-  display: inline-block; /* Alinea el botón en línea */
+  display: inline-block;
   width: fit-content;
   text-align: center;
   transition: background-color 0.3s ease;
@@ -75,11 +74,11 @@
   font-size: 27px;
   font-family: Signika;
   border: 2px solid rgb(226, 65, 108);
-  text-decoration: none; /* Elimina subrayado */
+  text-decoration: none;
 }
 
 .submit-button:hover {
-  background-color: #1ec450; /* Efecto hover */
+  background-color: #1ec450;
   color: white;
   border: 2px solid rgb(25, 131, 3);
 }
@@ -95,6 +94,6 @@
 
 .submit-button-container {
   display: flex;
-  justify-content: center; /* Centra el botón horizontalmente */
-  margin-top: 10px; /* Espaciado arriba */
+  justify-content: center;
+  margin-top: 10px;
 }

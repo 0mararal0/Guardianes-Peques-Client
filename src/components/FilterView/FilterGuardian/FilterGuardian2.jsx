@@ -14,7 +14,6 @@ export const FilterGuardian2 = ({
     dormir: false,
   };
 
-  // Datos iniciales para las edades
   const edadesIniciales = {
     bebe: false,
     pequeño: false,
@@ -44,7 +43,7 @@ export const FilterGuardian2 = ({
   const handleEdadChange = (edad) => {
     setEdadesSeleccionadas((prev) => ({
       ...prev,
-      [edad]: !prev[edad], // Alterna entre verdadero y falso para la selección
+      [edad]: !prev[edad],
     }));
   };
 
@@ -53,15 +52,12 @@ export const FilterGuardian2 = ({
       ...prev,
       [servicio]: !prev[servicio],
     }));
-
-    // Limpiar el error cuando se selecciona un servicio
     if (!serviciosSeleccionados[servicio]) {
       setError("");
     }
   };
 
   const handleNextView = () => {
-    // Verifica que al menos una categoría de edad esté seleccionada
     const atLeastOneAgeSelected = Object.values(edadesSeleccionadas).some(
       (selected) => selected
     );
@@ -70,17 +66,15 @@ export const FilterGuardian2 = ({
       setError(
         "Debes seleccionar al menos una categoría de edad que puedas cuidar."
       );
-      return; // Evitar pasar a la siguiente vista si no se selecciona ninguna edad
+      return;
     }
-
-    // Si pasa la validación, avanza a la siguiente vista
     setComponentView(3);
     setProgress((100 / 4) * 3);
     setDataGuardian((prev) => ({
       ...prev,
       numeroNiños: guardianData.numeroNiños,
-      edadesSeleccionadas, // Guardar las edades seleccionadas
-      serviciosSeleccionados, // Guardar los servicios seleccionados
+      edadesSeleccionadas,
+      serviciosSeleccionados,
     }));
   };
 
@@ -97,7 +91,7 @@ export const FilterGuardian2 = ({
             value={guardianData.numeroNiños}
             onChange={handleChange}
             min="1"
-            max="5" // Limitar a un máximo de 5 niños
+            max="5"
             required
           />
         </Form.Group>
