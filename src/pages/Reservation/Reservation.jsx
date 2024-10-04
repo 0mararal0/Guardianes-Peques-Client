@@ -23,8 +23,7 @@ export const Reservation = () => {
   const handleDeleted = (id) => {
     axios
       .delete(`${import.meta.env.VITE_SERVER_URL}/client/${id}`)
-      .then((res) => {
-        console.log("datos borrados correctamente", res.data);
+      .then(() => {
         setDeleted(true);
       })
       .catch((err) => {

@@ -1,10 +1,11 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const FilterClient6 = ({ dataClient }) => {
   const [dataGuardian, setDataGuardian] = useState();
   const navigate = useNavigate();
+
   useEffect(() => {
     axios
       .get(
@@ -13,7 +14,6 @@ export const FilterClient6 = ({ dataClient }) => {
       .then((res) => {
         setDataGuardian(res.data);
       })
-
       .catch((err) => {
         console.log(err);
         navigate("/error");
@@ -23,9 +23,7 @@ export const FilterClient6 = ({ dataClient }) => {
   const handleSubmit = () => {
     axios
       .post(`${import.meta.env.VITE_SERVER_URL}/client`, dataClient)
-      .then((res) => {
-        console.log("datos enviados correctamente", res.data);
-      })
+      .then(() => {})
       .catch((err) => {
         console.log(err);
         navigate("/error");

@@ -2,7 +2,6 @@
   background-image: url("../../assets/images/nube_fondo_bebe.jpg");
   background-size: cover;
   background-position: center;
-
   min-height: 100vh;
   position: relative;
   padding-top: 50px;
@@ -15,7 +14,6 @@
 }
 .titleReservation2 {
   width: 90%;
-
   font-size: 2rem;
   font-family: "ConcertOne";
   margin-top: 50px;
