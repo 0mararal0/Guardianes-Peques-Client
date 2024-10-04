@@ -6,7 +6,7 @@
 }
 
 .footer {
-  height: 450px;
+  height: 320px;
   width: 100%; /* Asegura que el footer ocupe todo el ancho */
   position: relative; /* Cambiado a relative para evitar que el footer se superponga */
   margin-bottom: 0;
@@ -15,7 +15,6 @@
 }
 
 .footer-contenedor {
-  
   width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
 }
 
