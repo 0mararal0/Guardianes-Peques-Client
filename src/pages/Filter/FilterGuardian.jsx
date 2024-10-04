@@ -14,7 +14,11 @@ export const FilterGuardian = () => {
 
   return (
     <>
-      <ProgressBar variant="success" now={progress} />
+      <ProgressBar
+        className="w-75 mx-auto mt-3"
+        variant="success"
+        now={progress}
+      />
       {componentView === 1 && (
         <FilterGuardian1
           setComponentView={setComponentView}

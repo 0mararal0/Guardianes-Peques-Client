@@ -41,9 +41,8 @@ export const FilterClient3 = ({
         <h3 className="titleFilterClient1">Fechas</h3>
         <p className="title2FilterClient1">¿Para cuándo?</p>
         <Form onClick={handleWeek}>
+          <Form.Label>Días de la semana</Form.Label>
           <div>
-            <Form.Label>Días de la semana</Form.Label>
-
             <Form.Check
               inline
               label="L"
@@ -130,7 +129,10 @@ export const FilterClient3 = ({
             <option value="8">8 hora</option>
           </Form.Select>
         </Form>{" "}
-        <button className="btnFilterClient1" onClick={handleNextView}>
+        <button
+          className="btnFilterClient1 btnFormClient"
+          onClick={handleNextView}
+        >
           Siguiente
         </button>
       </div>

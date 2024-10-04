@@ -63,7 +63,9 @@ export const FilterGuardian4 = ({
     const diferenciaHoras = (fin - inicio) / (1000 * 60 * 60); // Diferencia en horas
 
     if (diferenciaHoras > 8) {
-      setError("La diferencia entre hora de inicio y hora de fin no puede exceder 8 horas.");
+      setError(
+        "La diferencia entre hora de inicio y hora de fin no puede exceder 8 horas."
+      );
       return;
     }
 
@@ -87,22 +89,25 @@ export const FilterGuardian4 = ({
 
   // Estilos en línea
   const diasListStyle = {
-    display: 'flex',
-    flexDirection: 'column',
+    display: "flex",
+    flexDirection: "column",
   };
 
   const formCheckStyle = {
-    marginBottom: '10px',
+    marginBottom: "10px",
   };
-  
 
   return (
     <>
-      <div className="container-xxl">
-        <h3>Disponibilidad semanal</h3>
+      <div className="containerFilterClient1 mx-auto my-5">
+        <h3 className="titleFilterClient1">Disponibilidad semanal</h3>
         <div style={diasListStyle}>
           {Object.keys(diasSemana).map((dia) => (
-            <Form.Group key={dia} controlId={`formDia${dia}`} style={formCheckStyle}>
+            <Form.Group
+              key={dia}
+              controlId={`formDia${dia}`}
+              style={formCheckStyle}
+            >
               <Form.Check
                 type="checkbox"
                 label={dia}
@@ -112,11 +117,9 @@ export const FilterGuardian4 = ({
             </Form.Group>
           ))}
         </div>
-
-        {error && <p style={{ color: "red" }}>{error}</p>} {/* Mostrar mensaje de error */}
-
+        {error && <p style={{ color: "red" }}>{error}</p>}{" "}
+        {/* Mostrar mensaje de error */}
         <h3>Detalles del servicio</h3>
-
         <Form.Group controlId="formHoraInicio">
           <Form.Label>Hora diaria de inicio</Form.Label>
           <Form.Control
@@ -126,7 +129,6 @@ export const FilterGuardian4 = ({
             isInvalid={!horaInicio && error} // Validar si falta la hora de inicio
           />
         </Form.Group>
-
         <Form.Group controlId="formHoraFin">
           <Form.Label>Hora diaria de fin</Form.Label>
           <Form.Control
@@ -136,7 +138,6 @@ export const FilterGuardian4 = ({
             isInvalid={!horaFin && error} // Validar si falta la hora de fin
           />
         </Form.Group>
-
         <Form.Group controlId="formTarifa">
           <Form.Label>Tarifa por hora ($)</Form.Label>
           <Form.Control
@@ -147,7 +148,6 @@ export const FilterGuardian4 = ({
             isInvalid={tarifa <= 0 && error} // Validar si falta la tarifa
           />
         </Form.Group>
-
         <Form.Group controlId="formComentario">
           <Form.Label>Comentarios adicionales (opcional)</Form.Label>
           <Form.Control
@@ -157,15 +157,14 @@ export const FilterGuardian4 = ({
             onChange={(e) => setComentario(e.target.value)}
           />
         </Form.Group>
-
+        <button
+          className="btnFormClient"
+          onClick={handleNextView}
+          style={{ marginTop: "20px" }} // Estilo en línea para el botón
+        >
+          Siguiente
+        </button>
       </div>
-
-      <button
-        onClick={handleNextView}
-        style={{ marginTop: "20px" }} // Estilo en línea para el botón
-      >
-        Siguiente
-      </button>
     </>
   );
 };

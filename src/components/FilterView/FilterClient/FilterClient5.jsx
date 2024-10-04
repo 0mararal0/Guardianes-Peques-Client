@@ -17,8 +17,6 @@ export const FilterClient5 = ({
     axios
       .get(`${import.meta.env.VITE_SERVER_URL}/guardian`)
       .then((res) => {
-        console.log(res.data);
-
         let prov = res.data.filter((elem) => {
           //Edad del niño
           if (dataClient.edadNiño.bebe && !elem.edadesSeleccionadas.bebe)
@@ -78,7 +76,10 @@ export const FilterClient5 = ({
             return false;
           if (horaInicioClient + parseInt(dataClient.reservationTime) > horaFin)
             return false;
-          if (dataClient.poblacion !== elem.provincia) return false;
+          if (
+            dataClient.poblacion.toUpperCase() !== elem.provincia.toUpperCase()
+          )
+            return false;
 
           return true;
         });
@@ -125,7 +126,7 @@ export const FilterClient5 = ({
                   </ListGroup>
                   <Card.Body>
                     <button
-                      className="btnFilterClient1"
+                      className="btnFilterClient1 btnFormClient"
                       onClick={() => handleSubmit(elem.id)}
                     >
                       Reservar{" "}
@@ -144,13 +145,13 @@ export const FilterClient5 = ({
               </p>
               <div className=" d-flex gap-4 justify-content-center">
                 <button
-                  className="btnFilterClient1"
+                  className="btnFilterClient1 btnFormClient"
                   onClick={() => navigate("/filter")}
                 >
                   Si
                 </button>
                 <button
-                  className="btnFilterClient1"
+                  className="btnFilterClient1 btnFormClient"
                   onClick={() => navigate("/")}
                 >
                   No

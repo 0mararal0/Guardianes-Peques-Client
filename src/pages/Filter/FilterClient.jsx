@@ -13,8 +13,6 @@ export const FilterClient = () => {
   const [progress, setProgress] = useState(100 / 5);
   const [dataClient, setDataClient] = useState({});
 
-  console.log(dataClient);
-
   return (
     <>
       <div className="my-3 containerFilterClient">

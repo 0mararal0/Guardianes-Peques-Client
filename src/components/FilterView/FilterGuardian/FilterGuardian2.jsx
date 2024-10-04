@@ -23,12 +23,14 @@ export const FilterGuardian2 = ({
     adolescente: false,
   };
 
-  const [serviciosSeleccionados, setServiciosSeleccionados] = useState(serviciosData);
-  const [edadesSeleccionadas, setEdadesSeleccionadas] = useState(edadesIniciales);
+  const [serviciosSeleccionados, setServiciosSeleccionados] =
+    useState(serviciosData);
+  const [edadesSeleccionadas, setEdadesSeleccionadas] =
+    useState(edadesIniciales);
   const [guardianData, setGuardianData] = useState({
-    numeroNiños: '1',
+    numeroNiños: "1",
   });
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   // Manejo del cambio en la cantidad de niños
   const handleChange = (e) => {
@@ -54,16 +56,20 @@ export const FilterGuardian2 = ({
 
     // Limpiar el error cuando se selecciona un servicio
     if (!serviciosSeleccionados[servicio]) {
-      setError('');
+      setError("");
     }
   };
 
   const handleNextView = () => {
     // Verifica que al menos una categoría de edad esté seleccionada
-    const atLeastOneAgeSelected = Object.values(edadesSeleccionadas).some((selected) => selected);
+    const atLeastOneAgeSelected = Object.values(edadesSeleccionadas).some(
+      (selected) => selected
+    );
 
     if (!atLeastOneAgeSelected) {
-      setError('Debes seleccionar al menos una categoría de edad que puedas cuidar.');
+      setError(
+        "Debes seleccionar al menos una categoría de edad que puedas cuidar."
+      );
       return; // Evitar pasar a la siguiente vista si no se selecciona ninguna edad
     }
 
@@ -80,8 +86,10 @@ export const FilterGuardian2 = ({
 
   return (
     <>
-      <div className="container-xxl">
-        <h3 style={{ marginTop: '20px' }}>Número de peques que puedes cuidar:</h3>
+      <div className="containerFilterClient1 mx-auto my-5">
+        <h3 style={{ marginTop: "20px" }} className="titleFilterClient1">
+          Número de peques que puedes cuidar:
+        </h3>
         <Form.Group controlId="formNumeroNiños">
           <Form.Control
             type="number"
@@ -94,10 +102,10 @@ export const FilterGuardian2 = ({
           />
         </Form.Group>
 
-        <h4 style={{ marginTop: '20px' }}>Edad peques:</h4>
-        <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+        <h4 style={{ marginTop: "20px" }}>Edad peques:</h4>
+        <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
           {Object.keys(edadesIniciales).map((edad) => (
-            <div key={edad} style={{ flex: '1 1 150px' }}>
+            <div key={edad} style={{ flex: "1 1 150px" }}>
               <Form.Check
                 type="checkbox"
                 label={edad.charAt(0).toUpperCase() + edad.slice(1)}
@@ -108,14 +116,23 @@ export const FilterGuardian2 = ({
           ))}
         </div>
 
-        <h3 style={{ marginTop: '20px' }}>Servicios adicionales (opcional):</h3>
-        {error && <div style={{ color: 'red' }}>{error}</div>}
+        <h3 style={{ marginTop: "20px" }}>Servicios adicionales (opcional):</h3>
+        {error && <div style={{ color: "red" }}>{error}</div>}
 
-        <div className="servicios-list" style={{ display: 'flex', flexDirection: 'column', marginTop: '10px' }}>
+        <div
+          className="servicios-list"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            marginTop: "10px",
+          }}
+        >
           {Object.keys(serviciosData).map((servicio) => (
             <div
               key={servicio}
-              className={`servicio-item ${serviciosSeleccionados[servicio] ? "selected" : ""}`}
+              className={`servicio-item ${
+                serviciosSeleccionados[servicio] ? "selected" : ""
+              }`}
               onClick={() => handleServicioClick(servicio)}
               style={{
                 cursor: "pointer",
@@ -123,18 +140,19 @@ export const FilterGuardian2 = ({
                 margin: "5px",
                 color: serviciosSeleccionados[servicio] ? "#fff" : "#000",
                 borderRadius: "5px",
-                backgroundColor: serviciosSeleccionados[servicio] ? "#007bff" : "#f8f9fa",
+                backgroundColor: serviciosSeleccionados[servicio]
+                  ? "#007bff"
+                  : "#f8f9fa",
               }}
             >
               {servicio.charAt(0).toUpperCase() + servicio.slice(1)}
             </div>
           ))}
         </div>
+        <button className="btnFormClient" onClick={handleNextView}>
+          Siguiente
+        </button>
       </div>
-
-      <button onClick={handleNextView}>
-        Siguiente
-      </button>
     </>
   );
 };

@@ -2,12 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export const FilterClient6 = ({
-  setComponentView,
-  setProgress,
-  setDataClient,
-  dataClient,
-}) => {
+export const FilterClient6 = ({ dataClient }) => {
   const [dataGuardian, setDataGuardian] = useState();
   const navigate = useNavigate();
   useEffect(() => {
@@ -38,35 +33,38 @@ export const FilterClient6 = ({
 
   return (
     <>
-      <div>
-        <h3>Resumen de la reserva</h3>
-        <p>Hola {dataClient.nombre} estos son los datos de tu reserva</p>
-        <p>
-          El servicio es para {dataClient.direcion} piso {dataClient.piso} letra{" "}
-          {dataClient.letra}{" "}
-        </p>
-        <p>
-          Localidad {dataClient.ciudad} provincia {dataClient.poblacion}
-        </p>
-        <p>
-          te vamos a cuidar {dataClient.niños} niños en edad{" "}
-          {dataClient.edadNiño.bebe && "bebé"}
-          {dataClient.edadNiño.pequeño && "pequeño"}
-          {dataClient.edadNiño.prescolar && "prescolar"}
-          {dataClient.edadNiño.escolar && "escolar"}
-          {dataClient.edadNiño.adolescente && "adolescente"}
-        </p>
-        <p>
-          Tu contacto es a través del teléfono {dataClient.telefono} o del
-          correo {dataClient.email}.
-        </p>
-        <p>
-          El guardian que has elegido es {dataGuardian?.nombre}{" "}
-          {dataGuardian?.apellidos}
-        </p>
-        <p>Su teléfono es {dataGuardian?.teléfono}</p>
-
-        <button onClick={handleSubmit}>confirmar reserva</button>
+      <div className="text-center mx-auto containerFilterClient1">
+        <h3 className="titleFilterClient1">Resumen de la reserva</h3>
+        <div className=" title2FilterClient1 text-start mt-5 ms-5">
+          <p>Hola {dataClient.nombre} estos son los datos de tu reserva</p>
+          <p>
+            El servicio es para {dataClient.direcion} piso {dataClient.piso}{" "}
+            letra {dataClient.letra}{" "}
+          </p>
+          <p>
+            Localidad {dataClient.ciudad} provincia {dataClient.poblacion}
+          </p>
+          <p>
+            te vamos a cuidar {dataClient.niños} niños en edad{" "}
+            {dataClient.edadNiño.bebe && "bebé"}
+            {dataClient.edadNiño.pequeño && "pequeño"}
+            {dataClient.edadNiño.prescolar && "prescolar"}
+            {dataClient.edadNiño.escolar && "escolar"}
+            {dataClient.edadNiño.adolescente && "adolescente"}
+          </p>
+          <p>
+            Tu contacto es a través del teléfono {dataClient.telefono} o del
+            correo {dataClient.email}.
+          </p>
+          <p>
+            El guardian que has elegido es {dataGuardian?.nombre}{" "}
+            {dataGuardian?.apellidos}
+          </p>
+          <p>Su teléfono es {dataGuardian?.telefono}</p>
+          <button className="btnFormClient" onClick={handleSubmit}>
+            Confirmar reserva
+          </button>
+        </div>
       </div>
     </>
   );

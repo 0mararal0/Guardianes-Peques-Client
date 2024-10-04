@@ -235,7 +235,7 @@ export const FilterClient4 = ({
             </Form.Group>
           </Row>
           <div className="w-100 text-center">
-            <button className="btnFilterClient1 " type="submit">
+            <button className="btnFilterClient1 btnFormClient " type="submit">
               Siguiente
             </button>
           </div>

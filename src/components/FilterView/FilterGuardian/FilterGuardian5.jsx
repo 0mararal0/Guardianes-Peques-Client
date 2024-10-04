@@ -1,19 +1,17 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import axios from "axios"; // Asegúrate de importar axios
+import { useNavigate } from "react-router-dom";
 
-export const FilterGuardian5 = ({
-  setComponentView,
-  setProgress,
-  dataGuardian,
-}) => {
-  console.log(dataGuardian);
+export const FilterGuardian5 = ({ dataGuardian }) => {
+  const navigate = useNavigate();
 
   const handleSubmit = () => {
     axios
       .post(`${import.meta.env.VITE_SERVER_URL}/guardian`, dataGuardian)
       .then((res) => {
         console.log("datos enviados correctamente", res.data);
+        navigate("/");
         // Aquí puedes agregar lógica adicional después de enviar los datos,
         // como cambiar la vista o mostrar un mensaje de éxito
       })
@@ -24,8 +22,8 @@ export const FilterGuardian5 = ({
   };
 
   return (
-    <div className="container-xxl">
-      <h3>Resumen de selección</h3>
+    <div className="containerFilterClient1 mx-auto my-5">
+      <h3 className="titleFilterClient1">Resumen de selección</h3>
 
       {/* Datos personales del Guardián */}
       <h4>Datos del Guardián:</h4>
@@ -136,9 +134,13 @@ export const FilterGuardian5 = ({
       <p>{dataGuardian.comentario || "Sin comentarios"}</p>
 
       {/* Botón para continuar */}
-      <Button onClick={handleSubmit} style={{ marginTop: "20px" }}>
+      <button
+        className="btnFormClient"
+        onClick={handleSubmit}
+        style={{ marginTop: "20px" }}
+      >
         Registrar
-      </Button>
+      </button>
     </div>
   );
 };
