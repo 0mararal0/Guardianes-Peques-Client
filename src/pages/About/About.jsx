@@ -1,17 +1,17 @@
 import React from "react";
 import "./styleAbout.css";
 import imagenUno from "../../assets/images/XEKFGJNTN5G2TLE4HLGXU5LN5U.avif";
-import imgNube from "../../assets/images/nube_fondo_bebe.jpg"
 
 export const About = () => {
-  
   return (
     <>
-      <section className="section-class" style={{ backgroundImage: `url(${imagenUno})` }}>
-      <h1 className="titulo-p">Nuestra misión</h1>
+      <section
+        className="section-class"
+        style={{ backgroundImage: `url(${imagenUno})` }}
+      >
+        <h1 className="titulo-p">Nuestra misión</h1>
         <div className="fondo">
           <div className="div-cards container-xxl">
-
             <div className="card">
               <h3 className="titulo">familias y cuidadores.</h3>
               <p className="texto">
@@ -24,10 +24,10 @@ export const About = () => {
             <div className="card">
               <h3 className="titulo">Objetivo.</h3>
               <p className="texto">
-                Facilitamos a las familias la búsqueda de cuidadores especializados
-                que se adapten a sus necesidades, al tiempo que brindamos
-                oportunidades laborales a profesionales en el ámbito del cuidado
-                infantil.
+                Facilitamos a las familias la búsqueda de cuidadores
+                especializados que se adapten a sus necesidades, al tiempo que
+                brindamos oportunidades laborales a profesionales en el ámbito
+                del cuidado infantil.
                 <p>✨✨✨✨✨</p>
               </p>
             </div>
@@ -40,14 +40,13 @@ export const About = () => {
                 <p>✨✨✨✨✨</p>
               </p>
             </div>
-            
 
             <div className="card">
               <h3 className="titulo">Facilidades laborales</h3>
               <p className="texto">
-                Para los cuidadores, ofrecemos una plataforma donde pueden descubrir
-                oportunidades laborales de calidad y conectar con familias que
-                valoran su experiencia y dedicación.
+                Para los cuidadores, ofrecemos una plataforma donde pueden
+                descubrir oportunidades laborales de calidad y conectar con
+                familias que valoran su experiencia y dedicación.
                 <p>✨✨✨✨✨</p>
               </p>
             </div>
