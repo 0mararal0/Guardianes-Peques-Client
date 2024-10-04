@@ -1,3 +1,4 @@
+import "./styleGuardians.css";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Button, Card } from "react-bootstrap";
@@ -19,8 +20,6 @@ export const Guardians = () => {
         console.log(err);
       });
   }, [deleted]);
-  console.log(deleted);
-  console.log(dataGuardian);
 
   const handleDelete = (id) => {
     axios
@@ -41,12 +40,13 @@ export const Guardians = () => {
 
   return (
     <>
-      <div className="d-flex gap-5 shadow-lg flex-wrap">
+      <div className="d-flex justify-content-center shadow-lg flex-wrap containerGuardians">
+        <h3 className="titleGuardians">Guardianes</h3>
         {dataGuardian.length !== 0 &&
           dataGuardian?.map((elem) => {
             return (
               <div key={elem.id}>
-                <Card style={{ width: "18rem" }}>
+                <Card style={{ width: "23rem", minHeight: "600px" }}>
                   <Card.Img variant="top" src={elem?.foto} />
                   <Card.Body>
                     <Card.Title>
@@ -55,18 +55,20 @@ export const Guardians = () => {
                     </Card.Title>
                     <Card.Text>{elem?.comentario}</Card.Text>
                   </Card.Body>
-                  <Button
-                    variant="primary"
-                    onClick={() => handleDelete(elem.id)}
-                  >
-                    Eliminar
-                  </Button>
-                  <Button
-                    variant="primary"
-                    onClick={() => navigate(`/editGuardian/${elem.id}`)}
-                  >
-                    Editar
-                  </Button>
+                  <div className="d-flex gap-3">
+                    <Button
+                      variant="primary"
+                      onClick={() => handleDelete(elem.id)}
+                    >
+                      Eliminar
+                    </Button>
+                    <Button
+                      variant="primary"
+                      onClick={() => navigate(`/editGuardian/${elem.id}`)}
+                    >
+                      Editar
+                    </Button>
+                  </div>
                 </Card>
               </div>
             );

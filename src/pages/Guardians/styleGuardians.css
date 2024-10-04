@@ -1,0 +1,15 @@
+.containerGuardians {
+  background-image: url("../../assets/images/nube_fondo_bebe.jpg");
+  background-size: cover;
+  background-position: center;
+
+  min-height: 100vh;
+  position: relative;
+}
+.titleGuardians {
+  width: 90%;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "ConcertOne";
+  margin-top: 50px;
+}

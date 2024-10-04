@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const FilterClient6 = ({
   setComponentView,
@@ -8,6 +9,7 @@ export const FilterClient6 = ({
   dataClient,
 }) => {
   const [dataGuardian, setDataGuardian] = useState();
+  const navigate = useNavigate();
   useEffect(() => {
     axios
       .get(
@@ -31,6 +33,7 @@ export const FilterClient6 = ({
       .catch((err) => {
         console.log(err);
       });
+    navigate("/");
   };
 
   return (
@@ -62,8 +65,8 @@ export const FilterClient6 = ({
           {dataGuardian?.apellidos}
         </p>
         <p>Su teléfono es {dataGuardian?.teléfono}</p>
-        <p>confirmar reserva</p>
-        <button onClick={handleSubmit}></button>
+
+        <button onClick={handleSubmit}>confirmar reserva</button>
       </div>
     </>
   );

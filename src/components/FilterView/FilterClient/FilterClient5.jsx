@@ -78,7 +78,7 @@ export const FilterClient5 = ({
             return false;
           if (horaInicioClient + parseInt(dataClient.reservationTime) > horaFin)
             return false;
-          if (dataClient.localidad !== elem.provincia) return false;
+          if (dataClient.poblacion !== elem.provincia) return false;
 
           return true;
         });
@@ -98,66 +98,67 @@ export const FilterClient5 = ({
       ...prov,
       guardianId: id,
     }));
-    navigate(`/reservation/${id}`);
   };
   return (
     <>
       <div className="containerFilterClient1 d-flex flex-column mx-auto ">
         <h3 className="titleFilterClient1">Guardianes disponibles</h3>
-        {dataGuardianSelect?.length !== 0 ? (
-          dataGuardianSelect.map((elem) => {
-            return (
-              <Card key={elem.id} style={{ width: "18rem" }}>
-                <Card.Img variant="top" src={elem.foto} />
-                <Card.Body>
-                  <Card.Title>
-                    {elem.nombre} {elem.apellidos}
-                  </Card.Title>
-                  <Card.Text>{elem.comentario}</Card.Text>
-                </Card.Body>
-                <ListGroup className="list-group-flush">
-                  <ListGroup.Item>
-                    {elem.teléfono} {elem.email}{" "}
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    {elem.localidad} {elem.provincia}
-                  </ListGroup.Item>
-                </ListGroup>
-                <Card.Body>
-                  <button
-                    className="btnFilterClient1"
-                    onClick={() => handleSubmit(elem.id)}
-                  >
-                    Reservar{" "}
-                  </button>
-                </Card.Body>
-              </Card>
-            );
-          })
-        ) : (
-          <div>
-            <p className="title2FilterClient1">
-              Ahora no hay ningun guardian disponible
-            </p>
-            <p className="title2FilterClient1">
-              Quieres volver a rellenar el formulario?
-            </p>
-            <div className=" d-flex gap-4 justify-content-center">
-              <button
-                className="btnFilterClient1"
-                onClick={() => navigate("/filter")}
-              >
-                Si
-              </button>
-              <button
-                className="btnFilterClient1"
-                onClick={() => navigate("/")}
-              >
-                No
-              </button>
+        <div className="d-flex flex-wrap">
+          {dataGuardianSelect?.length !== 0 ? (
+            dataGuardianSelect.map((elem) => {
+              return (
+                <Card key={elem.id} style={{ width: "18rem" }}>
+                  <Card.Img variant="top" src={elem.foto} />
+                  <Card.Body>
+                    <Card.Title>
+                      {elem.nombre} {elem.apellidos}
+                    </Card.Title>
+                    <Card.Text>{elem.comentario}</Card.Text>
+                  </Card.Body>
+                  <ListGroup className="list-group-flush">
+                    <ListGroup.Item>
+                      {elem.teléfono} {elem.email}{" "}
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                      {elem.localidad} {elem.provincia}
+                    </ListGroup.Item>
+                  </ListGroup>
+                  <Card.Body>
+                    <button
+                      className="btnFilterClient1"
+                      onClick={() => handleSubmit(elem.id)}
+                    >
+                      Reservar{" "}
+                    </button>
+                  </Card.Body>
+                </Card>
+              );
+            })
+          ) : (
+            <div>
+              <p className="title2FilterClient1">
+                Ahora no hay ningun guardian disponible
+              </p>
+              <p className="title2FilterClient1">
+                Quieres volver a rellenar el formulario?
+              </p>
+              <div className=" d-flex gap-4 justify-content-center">
+                <button
+                  className="btnFilterClient1"
+                  onClick={() => navigate("/filter")}
+                >
+                  Si
+                </button>
+                <button
+                  className="btnFilterClient1"
+                  onClick={() => navigate("/")}
+                >
+                  No
+                </button>
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </>
   );

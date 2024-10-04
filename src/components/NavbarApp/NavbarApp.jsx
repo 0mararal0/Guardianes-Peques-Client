@@ -19,18 +19,19 @@ export const NavbarApp = () => {
             id="basic-navbar-nav"
             className="justify-content-end"
           >
-
             <Nav className="header-nav">
               <Nav.Link href="/" className="tipo-letra">
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/about" className="tipo-letra">
-                Sobre Nosotros
-              </Nav.Link>
               <Nav.Link href="/guardians" className="tipo-letra">
                 Guardianes
               </Nav.Link>
-
+              <Nav.Link href="/reservation" className="tipo-letra">
+                Reservas
+              </Nav.Link>
+              <Nav.Link as={Link} to="/about" className="tipo-letra">
+                Sobre Nosotros
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
