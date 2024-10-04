@@ -1,4 +1,3 @@
-import React from "react";
 import "./styleLegalNotice.css";
 import { Link } from "react-router-dom";
 

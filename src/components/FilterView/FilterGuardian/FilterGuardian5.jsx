@@ -15,6 +15,10 @@ export const FilterGuardian5 = ({ dataGuardian }) => {
       })
       .catch((err) => {
         console.log(err);
+
+        navigate("/error");
+        
+
       });
   };
 

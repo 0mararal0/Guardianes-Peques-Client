@@ -1,7 +1,6 @@
 import "./styleHome.css";
 import { Link } from "react-router-dom";
-import foto1 from "../../assets/images/padreHijo-removebg-preview.png";
-import fotoHome from "../../assets/images/cuidadora_pagina_home.jpg"
+import fotoHome from "../../assets/images/cuidadora_pagina_home.jpg";
 
 export const Home = () => {
   return (

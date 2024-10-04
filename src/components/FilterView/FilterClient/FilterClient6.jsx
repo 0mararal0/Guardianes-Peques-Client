@@ -16,6 +16,7 @@ export const FilterClient6 = ({ dataClient }) => {
 
       .catch((err) => {
         console.log(err);
+        navigate("/error");
       });
   }, []);
 
@@ -27,6 +28,7 @@ export const FilterClient6 = ({ dataClient }) => {
       })
       .catch((err) => {
         console.log(err);
+        navigate("/error");
       });
     navigate("/");
   };

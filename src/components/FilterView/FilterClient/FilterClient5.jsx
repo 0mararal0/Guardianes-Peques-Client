@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const FilterClient5 = ({
   setComponentView,
@@ -89,6 +89,8 @@ export const FilterClient5 = ({
 
       .catch((err) => {
         console.log(err);
+
+        navigate("/error");
       });
   }, []);
 

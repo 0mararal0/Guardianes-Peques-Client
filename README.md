@@ -39,7 +39,7 @@ Guardianes & Peques es una app para poder conectar a familias que necesitan un c
 ## Navegación de Usuario
 
 - **404** - El usuario puede ver una página 404 cuando navega a una página que no exite.
-- **500** - El usuario puede ver una página 505 cuando ha habido un error en la App.
+- **500** - El usuario puede ver una página 500 cuando ha habido un error en la App.
 - **homepage** - El usuario puede acceder a la página HOME para ver de forma general la App e interactuar con ella.
 - **Guandian Create** - El usuario se puede registrar como Guardian (trabajador) para ofrecer sus servicios.
 - **Guandian View** - El usuario puede ver los Guardianes que hay disponibles.

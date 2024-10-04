@@ -1,4 +1,3 @@
-import React from "react";
 import imagenNotFound from "../../assets/images/bebe_not_found.jpg";
 import "./styleNotFound.css";
 

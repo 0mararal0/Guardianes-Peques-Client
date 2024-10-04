@@ -1,11 +1,13 @@
 import "./styleReservation.css";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Card } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 export const Reservation = () => {
   const [reservas, setReservas] = useState();
   const [deleted, setDeleted] = useState(false);
+  const navigate = useNavigate();
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_SERVER_URL}/guardian?_embed=client`)
@@ -13,8 +15,8 @@ export const Reservation = () => {
         setReservas(res.data);
         setDeleted(false);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
+        navigate("/error");
       });
   }, [deleted]);
 
@@ -27,6 +29,7 @@ export const Reservation = () => {
       })
       .catch((err) => {
         console.log(err);
+        navigate("/error");
       });
   };
 

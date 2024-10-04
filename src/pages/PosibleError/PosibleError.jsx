@@ -1,6 +1,5 @@
-import React from "react";
-import "./stylePosibleError.css"
-import imgError from "../../assets/images/img_error2.webp"
+import "./stylePosibleError.css";
+import imgError from "../../assets/images/img_error2.webp";
 
 export const PosibleError = () => {
   return (
