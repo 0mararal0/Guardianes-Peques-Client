@@ -15,6 +15,7 @@ import { NotFound } from "./pages/NotFound/NotFound";
 import { Guardians } from "./pages/Guardians/Guardians";
 import { EditGuardian } from "./pages/EditGuardian/EditGuardian";
 import { Reservation } from "./pages/Reservation/Reservation";
+import { PosibleError } from "./pages/PosibleError/PosibleError";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/editGuardian/:guardianId" element={<EditGuardian />} />
           <Route path="/reservation" element={<Reservation />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/error" element={<PosibleError />} />
         </Routes>
       </main>
       <Footer />
