@@ -1,0 +1,22 @@
+.containerEditGuardian {
+  background-image: url("../../assets/images/nube_fondo_bebe.jpg");
+  background-size: cover;
+  background-position: center;
+
+  min-height: 70vh;
+  position: relative;
+}
+.containerFormEdirGuardian {
+  width: 50%;
+  align-items: center;
+  font-family: "Signika";
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 15px grey;
+  border-radius: 20px;
+  padding: 15px;
+}
+.titleEditGuardian {
+  font-size: 3rem;
+  font-family: "ConcertOne";
+}
