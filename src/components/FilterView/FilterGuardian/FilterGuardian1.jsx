@@ -7,14 +7,14 @@ export const FilterGuardian1 = ({
   setDataGuardian,
 }) => {
   const [guardianData, setGuardianData] = useState({
-    nombre: '',
-    apellidos: '',
-    localidad: '',
-    provincia: '',
-    nacimiento: '',
-    telefono: '',
-    email: '',
-    foto: '',
+    nombre: "",
+    apellidos: "",
+    localidad: "",
+    provincia: "",
+    nacimiento: "",
+    telefono: "",
+    email: "",
+    foto: "",
   });
 
   const handleChange = (e) => {
@@ -31,13 +31,14 @@ export const FilterGuardian1 = ({
     setDataGuardian(guardianData);
   };
 
-  const isFormValid = Object.values(guardianData).every((field) => field !== '');
-  
+  const isFormValid = Object.values(guardianData).every(
+    (field) => field !== ""
+  );
 
   return (
     <>
-      <div className="container-xxl">
-        <h3>Sobre Ti</h3>
+      <div className="containerFilterClient1 mx-auto my-5">
+        <h3 className="titleFilterClient1">Sobre Ti</h3>
         <Form>
           <Form.Group controlId="formNombre">
             <Form.Label>Nombre:</Form.Label>
@@ -120,11 +121,14 @@ export const FilterGuardian1 = ({
             />
           </Form.Group>
         </Form>
+        <button
+          className="btnFormClient"
+          onClick={handleNextView}
+          disabled={!isFormValid}
+        >
+          Siguiente
+        </button>
       </div>
-
-      <button onClick={handleNextView} disabled={!isFormValid}>
-        Siguiente
-      </button>
     </>
   );
 };

@@ -22,6 +22,17 @@
 .buttonFilterClient1 > label {
   border-radius: 20px !important;
 }
+.btnFormClient {
+  padding: 15px 30px;
+  margin: 15px;
+  border: 1px solid grey;
+  border-radius: 20px;
+  background-color: #ffb0b0;
+  font-family: "ConcertOne";
+  transition: 0.5s;
+  color: black;
+  font-size: 1.2rem;
+}
 
 .containerFormFilterClient1 {
   display: flex;
@@ -30,6 +41,12 @@
 }
 .btnFilterClient1 {
   border-radius: 10px;
+}
+.btnFormClient:hover {
+  scale: 0.95;
+  box-shadow: 0px 0px 10px gray;
+  background-color: #b4121289;
+  transition: 0.5s;
 }
 
 @media (max-width: 900px) {

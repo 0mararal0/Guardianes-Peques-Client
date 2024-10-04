@@ -53,7 +53,10 @@ export const FilterClient2 = ({
           ))}
         </ToggleButtonGroup>
 
-        <button className="btnFilterClient1" onClick={handleNextView}>
+        <button
+          className="btnFilterClient1 btnFormClient"
+          onClick={handleNextView}
+        >
           Siguiente
         </button>
       </div>

@@ -100,11 +100,14 @@ export const FilterClient1 = ({
           </ToggleButtonGroup>
         </div>
         {kid === null || Object.values(kidAge).every((age) => !age) ? (
-          <button disabled className="btnFilterClient1">
+          <button disabled className="btnFilterClient1 btnFormClient">
             Siguiente
           </button>
         ) : (
-          <button className="btnFilterClient1" onClick={handleNextView}>
+          <button
+            className="btnFilterClient1 btnFormClient"
+            onClick={handleNextView}
+          >
             Siguiente
           </button>
         )}
